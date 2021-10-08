@@ -2,8 +2,8 @@
 #define altura_maxima 2.55
 
 typedef struct {
-	float peso;
-	float altura;
+		float peso;
+		float altura;
 } peso_altura;
 
 int main(void) {
