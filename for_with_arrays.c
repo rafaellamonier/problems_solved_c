@@ -16,7 +16,7 @@ int main(void) {
 
 	int count2;
 	for(count2 = 0; count2 < len; count2++) {
-		printf("Passada: %dº dor for externo.\n\n", count2);
+		printf("Passada: %dº do for externo.\n\n", count2);
 		printf("%d, ", j[count2]);
 		for(int count3 = 0; count3 < 3; count3++) { 
 			printf("Passada: %dº do for interno.\n\n", count3);
