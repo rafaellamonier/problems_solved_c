@@ -4,7 +4,6 @@ int main(void) {
 	int list_sort[3]; 
 	int len = sizeof(list_sort) / sizeof(list_sort[0]);
 
-	// read elements
 	int i;
 	for(i = 0; i < len; i++) {
 		scanf("%1d", &list_sort[i]);			
