@@ -1,22 +1,32 @@
 #include<stdio.h>
 
 int main(){
-    int a,b,c,aux;
-    int v[3];
-    
-    scanf("%d %d %d", &v[0], &v[1], &v[2]);
-   
-    for(int i = 0; i < 3; i++){
-        for(int j = 0; j < 3; j++){
-            if(v[i] < v[j]){
-                aux = v[j];
-                v[j] = v[i];
-                v[i] = aux;
-            }
-        }
+    int a,b,c;
+    int x, y, z, temp;
+
+    scanf("%d %d %d", &a, &b, &c);
+    x = a;
+    y = b;
+    z = c;
+
+    if (x>y) {
+        temp = x;
+        x = y;
+        y = temp;
     }
-    
-    printf("%d\n%d\n%d\n", v[0], v[1], v[2]);
+    if (x>z) {
+        temp = x;
+        x = z;
+        z = temp;
+    }
+    if (y>z) {
+        temp = y;
+        y = z;
+        z = temp;
+    }
+
+    printf("\n%d\n%d\n%d\n", x, y, z);
     printf("\n%d\n%d\n%d\n", a, b, c);
+    
     return 0;
 }
