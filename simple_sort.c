@@ -1,23 +1,26 @@
 #include<stdio.h>
 
-int main(void) {
-	int list_sort[3]; 
-	int len = sizeof(list_sort) / sizeof(list_sort[0]);
+int main() {
+	int a, b, c, aux;
+	int v[3];
 
-	int i;
-	for(i = 0; i < len; i++) {
-		scanf("%1d", &list_sort[i]);			
+	scanf("%d %d %d", &a, &b, &c);
+	v[0] = a;
+	v[1] = b;
+	v[2] = c;
+
+	for (int i = 0; i < 3; i++) {
+		for (int j = 0; j < 3; j++) {
+			if (v[i]<v[j]) {
+				aux = v[j];
+				v[j] = v[i];
+				v[i] = aux;
+			}
+		} 
 	}
+	
+	printf("%d\n%d\n%d\n", v[0], v[1], v[2]);
+	printf("\n%d\n%d\n%d\n", a, b, c);
 
-	int j;
-	for(j = 2; j >= 0; j--) {
-		printf("%d\n", list_sort[j]);			
-	}
-
-	printf("\n");
-
-	int k;
-	for(k = 0; k < len; k++) {
-		printf("%d\n", list_sort[k]); 
-	}
+	return 0;
 }
